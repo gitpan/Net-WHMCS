@@ -1,0 +1,17 @@
+Changes
+LICENSE
+MANIFEST
+META.json
+META.yml
+Makefile.PL
+README
+README.md
+dist.ini
+lib/Net/WHMCS.pm
+lib/Net/WHMCS/Base.pm
+lib/Net/WHMCS/Client.pm
+lib/Net/WHMCS/Support.pm
+t/00-compile.t
+t/release-pod-coverage.t
+t/release-pod-syntax.t
+xt/test.pl
