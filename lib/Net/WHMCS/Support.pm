@@ -1,9 +1,9 @@
 package Net::WHMCS::Support;
 {
-    $Net::WHMCS::Support::VERSION = '0.01';
+    $Net::WHMCS::Support::VERSION = '0.02';
 }
 
-# ABSTRACT: WHMCS API Clients
+# ABSTRACT: WHMCS API Support
 
 use Moo;
 with 'Net::WHMCS::Base';
@@ -22,13 +22,13 @@ __END__
 
 =head1 NAME
 
-Net::WHMCS::Support - WHMCS API Clients
+Net::WHMCS::Support - WHMCS API Support
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
-=head3 openticket
+=head2 openticket
 
 	$client->openticket({
 		clientid => 1,
@@ -37,7 +37,7 @@ version 0.01
 		message => 'message'
 	});
 
-http://docs.whmcs.com/API:Open_Ticket
+L<http://docs.whmcs.com/API:Open_Ticket>
 
 =head1 AUTHOR
 

@@ -4,7 +4,7 @@
       "Fayland Lam <fayland@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300033, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -32,6 +32,14 @@
             "LWP::UserAgent" : "0",
             "Moo" : "0"
          }
+      },
+      "test" : {
+         "requires" : {
+            "File::Spec" : "0",
+            "IO::Handle" : "0",
+            "IPC::Open3" : "0",
+            "Test::More" : "0"
+         }
       }
    },
    "release_status" : "stable",
@@ -42,6 +50,6 @@
          "web" : "https://github.com/fayland/perl-Net-WHMCS"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }
 

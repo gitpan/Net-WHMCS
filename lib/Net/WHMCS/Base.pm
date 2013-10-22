@@ -1,6 +1,6 @@
 package Net::WHMCS::Base;
 {
-    $Net::WHMCS::Base::VERSION = '0.01';
+    $Net::WHMCS::Base::VERSION = '0.02';
 }
 
 # ABSTRACT: WHMCS API Role
@@ -39,8 +39,7 @@ sub build_request {
     return { result => 'error', message => $resp->status_line }
       unless $resp->is_success;
 
-    print Dumper( \$resp );
-    use Data::Dumper;
+    # print Dumper(\$resp); use Data::Dumper;
 
     return decode_json( $resp->content );
 }
@@ -57,7 +56,7 @@ Net::WHMCS::Base - WHMCS API Role
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head3 build_request
 

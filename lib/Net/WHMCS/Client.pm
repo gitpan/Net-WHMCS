@@ -1,6 +1,6 @@
 package Net::WHMCS::Client;
 {
-    $Net::WHMCS::Client::VERSION = '0.01';
+    $Net::WHMCS::Client::VERSION = '0.02';
 }
 
 # ABSTRACT: WHMCS API Clients
@@ -71,18 +71,18 @@ Net::WHMCS::Client - WHMCS API Clients
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
-=head3 getclientsdetails
+=head2 getclientsdetails
 
 	$client->getclientsdetails({
 		clientid => 1,
 		stats => 'true',
 	})
 
-http://docs.whmcs.com/API:Get_Clients_Details
+L<http://docs.whmcs.com/API:Get_Clients_Details>
 
-=head3 addclient
+=head2 addclient
 
 	$client->addclient({
 		firstname => 'first',
@@ -91,9 +91,9 @@ http://docs.whmcs.com/API:Get_Clients_Details
 		...
 	})
 
-http://docs.whmcs.com/API:Add_Client
+L<http://docs.whmcs.com/API:Add_Client>
 
-=head3 updateclient
+=head2 updateclient
 
 	$client->updateclient({
 		clientid => 1,
@@ -103,46 +103,46 @@ http://docs.whmcs.com/API:Add_Client
 		...
 	})
 
-http://docs.whmcs.com/API:Update_Client
+L<http://docs.whmcs.com/API:Update_Client>
 
-=head3 deleteclient
+=head2 deleteclient
 
 	$client->deleteclient({
 		clientid => 1
 	})
 
-http://docs.whmcs.com/API:Delete_Client
+L<http://docs.whmcs.com/API:Delete_Client>
 
-=head3 getclients
+=head2 getclients
 
 	$client->getclients()
 
-http://docs.whmcs.com/API:Get_Clients
+L<http://docs.whmcs.com/API:Get_Clients>
 
-=head3 getclientpassword
+=head2 getclientpassword
 
 	$client->getclientpassword({
 		userid => 1
 	})
 
-http://docs.whmcs.com/API:Get_Clients_Password
+L<http://docs.whmcs.com/API:Get_Clients_Password>
 
-=head3 getclientsproducts
+=head2 getclientsproducts
 
 	$client->getclientsproducts({
 		clientid => 1
 	})
 
-http://docs.whmcs.com/API:Get_Clients_Products
+L<http://docs.whmcs.com/API:Get_Clients_Products>
 
-=head3 sendemail
+=head2 sendemail
 
 	$client->sendemail({
 		id => 1,
 		messagename => 'blabla'
 	})
 
-http://docs.whmcs.com/API:Send_Email
+L<http://docs.whmcs.com/API:Send_Email>
 
 =head1 AUTHOR
 

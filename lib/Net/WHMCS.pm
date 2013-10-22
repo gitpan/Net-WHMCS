@@ -1,6 +1,6 @@
 package Net::WHMCS;
 {
-    $Net::WHMCS::VERSION = '0.01';
+    $Net::WHMCS::VERSION = '0.02';
 }
 
 # ABSTRACT: WHMCS API
@@ -52,7 +52,7 @@ Net::WHMCS - WHMCS API
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
