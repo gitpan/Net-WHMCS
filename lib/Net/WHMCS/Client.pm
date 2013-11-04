@@ -1,12 +1,14 @@
 package Net::WHMCS::Client;
 {
-    $Net::WHMCS::Client::VERSION = '0.02';
+    $Net::WHMCS::Client::VERSION = '0.03';
 }
 
 # ABSTRACT: WHMCS API Clients
 
 use Moo;
 with 'Net::WHMCS::Base';
+
+use Carp 'croak';
 
 sub getclientsdetails {
     my ( $self, $params ) = @_;
@@ -52,6 +54,23 @@ sub getclientsproducts {
     return $self->build_request($params);
 }
 
+sub updateclientproduct {
+    my ( $self, $params ) = @_;
+    $params ||= {};
+    $params->{action} = 'updateclientproduct';
+    croak 'serviceid is required.' unless $params->{serviceid};
+    return $self->build_request($params);
+}
+
+sub validatelogin {
+    my ( $self, $params ) = @_;
+    $params ||= {};
+    $params->{action} = 'validatelogin';
+    croak 'email is required.'    unless $params->{email};
+    croak 'password2 is required' unless $params->{password2};
+    return $self->build_request($params);
+}
+
 sub sendemail {
     my ( $self, $params ) = @_;
     $params ||= {};
@@ -71,7 +90,7 @@ Net::WHMCS::Client - WHMCS API Clients
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head2 getclientsdetails
 
@@ -134,6 +153,24 @@ L<http://docs.whmcs.com/API:Get_Clients_Password>
 	})
 
 L<http://docs.whmcs.com/API:Get_Clients_Products>
+
+=head2 updateclientproduct
+
+	$client->getclientsproducts({
+		serviceid => 1,
+		...
+	})
+
+L<http://docs.whmcs.com/API:Update_Client_Product>
+
+=head2 validatelogin
+
+	$client->validatelogin({
+		email => 'user@domain.com',
+		password2 => 'abc123'
+	})
+
+L<http://docs.whmcs.com/API:Validate_Login>
 
 =head2 sendemail
 

@@ -1,9 +1,9 @@
 package Net::WHMCS;
 {
-    $Net::WHMCS::VERSION = '0.02';
+    $Net::WHMCS::VERSION = '0.03';
 }
 
-# ABSTRACT: WHMCS API
+# ABSTRACT: interface to the WHMCS billing and support system
 
 use Moo;
 use Carp 'croak';
@@ -48,11 +48,11 @@ __END__
 
 =head1 NAME
 
-Net::WHMCS - WHMCS API
+Net::WHMCS - interface to the WHMCS billing and support system
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 

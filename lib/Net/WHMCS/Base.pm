@@ -1,6 +1,6 @@
 package Net::WHMCS::Base;
 {
-    $Net::WHMCS::Base::VERSION = '0.02';
+    $Net::WHMCS::Base::VERSION = '0.03';
 }
 
 # ABSTRACT: WHMCS API Role
@@ -56,7 +56,7 @@ Net::WHMCS::Base - WHMCS API Role
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head3 build_request
 

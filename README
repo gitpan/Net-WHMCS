@@ -1,8 +1,8 @@
 NAME
-    Net::WHMCS - WHMCS API
+    Net::WHMCS - interface to the WHMCS billing and support system
 
 VERSION
-    version 0.02
+    version 0.03
 
 SYNOPSIS
             use Net::WHMCS;

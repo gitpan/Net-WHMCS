@@ -1,5 +1,5 @@
 ---
-abstract: 'WHMCS API'
+abstract: 'interface to the WHMCS billing and support system'
 author:
   - 'Fayland Lam <fayland@gmail.com>'
 build_requires:
@@ -10,7 +10,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 5.005, CPAN::Meta::Converter version 2.132830'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -22,4 +22,6 @@ requires:
   Moo: 0
 resources:
   repository: git://github.com/fayland/perl-Net-WHMCS.git
-version: 0.02
+version: 0.03
+x_contributors:
+  - 'Neil Bowers <neil@bowers.com>'
