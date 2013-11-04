@@ -3,12 +3,12 @@ use warnings;
 
 # this test was generated with Dist::Zilla::Plugin::Test::Compile 2.037
 
-use Test::More tests => 5 + ( $ENV{AUTHOR_TESTING} ? 1 : 0 );
+use Test::More tests => 6 + ( $ENV{AUTHOR_TESTING} ? 1 : 0 );
 
 my @module_files = (
     'Net/WHMCS.pm',        'Net/WHMCS/Base.pm',
     'Net/WHMCS/Client.pm', 'Net/WHMCS/Miscellaneous.pm',
-    'Net/WHMCS/Support.pm'
+    'Net/WHMCS/Order.pm',  'Net/WHMCS/Support.pm'
 );
 
 # no fake home requested

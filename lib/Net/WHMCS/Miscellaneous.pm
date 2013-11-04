@@ -1,6 +1,6 @@
 package Net::WHMCS::Miscellaneous;
 {
-    $Net::WHMCS::Miscellaneous::VERSION = '0.05';
+    $Net::WHMCS::Miscellaneous::VERSION = '0.06';
 }
 
 # ABSTRACT: WHMCS API Miscellaneous
@@ -31,11 +31,11 @@ Net::WHMCS::Miscellaneous - WHMCS API Miscellaneous
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head2 addproduct
 
-	$client->addproduct({
+	$whmcs->misc->addproduct({
 		type => 'other',
 		gid => 1,
 		name => 'Sample Product',

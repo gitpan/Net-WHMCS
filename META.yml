@@ -22,6 +22,6 @@ requires:
   Moo: 0
 resources:
   repository: git://github.com/fayland/perl-Net-WHMCS.git
-version: 0.05
+version: 0.06
 x_contributors:
   - 'Neil Bowers <neil@bowers.com>'

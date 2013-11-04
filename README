@@ -2,7 +2,7 @@ NAME
     Net::WHMCS - interface to the WHMCS billing and support system
 
 VERSION
-    version 0.05
+    version 0.06
 
 SYNOPSIS
             use Net::WHMCS;
@@ -44,6 +44,15 @@ PARTS
             });
 
     Net::WHMCS::Support
+
+  order
+            $whmcs->order->addorder({
+                    clientid => 1,
+                    pid => 1,
+                    ...
+            });
+
+    Net::WHMCS::Order
 
   misc
             $whmcs->misc->addproduct({

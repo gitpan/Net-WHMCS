@@ -50,7 +50,7 @@
          "web" : "https://github.com/fayland/perl-Net-WHMCS"
       }
    },
-   "version" : "0.05",
+   "version" : "0.06",
    "x_contributors" : [
       "Neil Bowers <neil@bowers.com>"
    ]

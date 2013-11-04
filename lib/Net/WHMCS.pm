@@ -1,6 +1,6 @@
 package Net::WHMCS;
 {
-    $Net::WHMCS::VERSION = '0.05';
+    $Net::WHMCS::VERSION = '0.06';
 }
 
 # ABSTRACT: interface to the WHMCS billing and support system
@@ -26,6 +26,7 @@ sub _build_args {
 }
 
 use Net::WHMCS::Client;
+use Net::WHMCS::Order;
 use Net::WHMCS::Support;
 use Net::WHMCS::Miscellaneous;
 
@@ -33,6 +34,12 @@ has 'client' => ( is => 'lazy' );
 
 sub _build_client {
     Net::WHMCS::Client->new( (shift)->_build_args() );
+}
+
+has 'order' => ( is => 'lazy' );
+
+sub _build_order {
+    Net::WHMCS::Order->new( (shift)->_build_args() );
 }
 
 has 'support' => ( is => 'lazy' );
@@ -59,7 +66,7 @@ Net::WHMCS - interface to the WHMCS billing and support system
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -105,6 +112,16 @@ L<Net::WHMCS::Client>
 	});
 
 L<Net::WHMCS::Support>
+
+=head2 order
+
+	$whmcs->order->addorder({
+		clientid => 1,
+		pid => 1,
+		...
+	});
+
+L<Net::WHMCS::Order>
 
 =head2 misc
 
