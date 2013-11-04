@@ -1,6 +1,6 @@
 package Net::WHMCS;
 {
-    $Net::WHMCS::VERSION = '0.04';
+    $Net::WHMCS::VERSION = '0.05';
 }
 
 # ABSTRACT: interface to the WHMCS billing and support system
@@ -59,7 +59,7 @@ Net::WHMCS - interface to the WHMCS billing and support system
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
