@@ -1,6 +1,6 @@
 package Net::WHMCS::Support;
 {
-    $Net::WHMCS::Support::VERSION = '0.03';
+    $Net::WHMCS::Support::VERSION = '0.04';
 }
 
 # ABSTRACT: WHMCS API Support
@@ -26,7 +26,7 @@ Net::WHMCS::Support - WHMCS API Support
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head2 openticket
 

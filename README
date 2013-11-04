@@ -2,7 +2,7 @@ NAME
     Net::WHMCS - interface to the WHMCS billing and support system
 
 VERSION
-    version 0.03
+    version 0.04
 
 SYNOPSIS
             use Net::WHMCS;
@@ -44,6 +44,19 @@ PARTS
             });
 
     Net::WHMCS::Support
+
+  misc
+            $whmcs->misc->addproduct({
+                    type => 'other',
+                    gid => 1,
+                    name => 'Sample Product',
+                    paytype => 'recurring',
+                    'pricing[1][monthly]' => '5.00',
+                    'pricing[1][annually]' => '50.00',
+                    ...
+            });
+
+    Net::WHMCS::Miscellaneous
 
 AUTHOR
     Fayland Lam <fayland@gmail.com>

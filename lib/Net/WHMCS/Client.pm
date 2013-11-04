@@ -1,6 +1,6 @@
 package Net::WHMCS::Client;
 {
-    $Net::WHMCS::Client::VERSION = '0.03';
+    $Net::WHMCS::Client::VERSION = '0.04';
 }
 
 # ABSTRACT: WHMCS API Clients
@@ -62,6 +62,19 @@ sub updateclientproduct {
     return $self->build_request($params);
 }
 
+sub upgradeproduct {
+    my ( $self, $params ) = @_;
+    $params ||= {};
+    $params->{action} = 'upgradeproduct';
+    foreach my $r (
+        qw/clientid serviceid type newproductid newproductbillingcycle paymentmethod/
+      )
+    {
+        croak "$r is required." unless $params->{$r};
+    }
+    return $self->build_request($params);
+}
+
 sub validatelogin {
     my ( $self, $params ) = @_;
     $params ||= {};
@@ -90,7 +103,7 @@ Net::WHMCS::Client - WHMCS API Clients
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head2 getclientsdetails
 
@@ -159,16 +172,29 @@ L<http://docs.whmcs.com/API:Get_Clients_Products>
 	$client->getclientsproducts({
 		serviceid => 1,
 		...
-	})
+	});
 
 L<http://docs.whmcs.com/API:Update_Client_Product>
+
+=head2 upgradeproduct
+
+	$client->upgradeproduct({
+		clientid => 1,
+		serviceid => 1,
+		type => 'product',
+		newproductid => 18,
+		newproductbillingcycle => 'monthly',
+		paymentmethod => 'paypal'
+	});
+
+L<http://docs.whmcs.com/API:Upgrade_Product>
 
 =head2 validatelogin
 
 	$client->validatelogin({
 		email => 'user@domain.com',
 		password2 => 'abc123'
-	})
+	});
 
 L<http://docs.whmcs.com/API:Validate_Login>
 

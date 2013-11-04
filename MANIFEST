@@ -10,7 +10,9 @@ dist.ini
 lib/Net/WHMCS.pm
 lib/Net/WHMCS/Base.pm
 lib/Net/WHMCS/Client.pm
+lib/Net/WHMCS/Miscellaneous.pm
 lib/Net/WHMCS/Support.pm
+perltidy.LOG
 t/00-compile.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t

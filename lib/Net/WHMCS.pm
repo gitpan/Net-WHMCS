@@ -1,6 +1,6 @@
 package Net::WHMCS;
 {
-    $Net::WHMCS::VERSION = '0.03';
+    $Net::WHMCS::VERSION = '0.04';
 }
 
 # ABSTRACT: interface to the WHMCS billing and support system
@@ -27,6 +27,7 @@ sub _build_args {
 
 use Net::WHMCS::Client;
 use Net::WHMCS::Support;
+use Net::WHMCS::Miscellaneous;
 
 has 'client' => ( is => 'lazy' );
 
@@ -38,6 +39,12 @@ has 'support' => ( is => 'lazy' );
 
 sub _build_support {
     Net::WHMCS::Support->new( (shift)->_build_args() );
+}
+
+has 'misc' => ( is => 'lazy' );
+
+sub _build_misc {
+    Net::WHMCS::Miscellaneous->new( (shift)->_build_args() );
 }
 
 1;
@@ -52,7 +59,7 @@ Net::WHMCS - interface to the WHMCS billing and support system
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -98,6 +105,20 @@ L<Net::WHMCS::Client>
 	});
 
 L<Net::WHMCS::Support>
+
+=head2 misc
+
+	$whmcs->misc->addproduct({
+		type => 'other',
+		gid => 1,
+		name => 'Sample Product',
+		paytype => 'recurring',
+		'pricing[1][monthly]' => '5.00',
+		'pricing[1][annually]' => '50.00',
+		...
+	});
+
+L<Net::WHMCS::Miscellaneous>
 
 =head1 AUTHOR
 

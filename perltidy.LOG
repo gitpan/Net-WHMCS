@@ -1,0 +1,54 @@
+perltidy version 20130922 log file on a darwin system, OLD_PERL_VERSION=5.018001
+Configuration and command line parameters for this run:
+
+To find error messages search for 'WARNING' with your editor
+Indentation will be with 4 spaces
+Line 1 implies starting-indentation-level = 0
+The nesting depths in the table below are at the start of the lines.
+The indicated output line numbers are not always exact.
+ci = levels of continuation indentation; bk = 1 if in BLOCK, 0 if not.
+
+in:out indent c b  nesting   code + messages; (messages begin with >>>)
+lines  levels i k            (code begins with one '.' per indent level)
+------  ----- - - --------   -------------------------------------------
+L4:4     i0:0 0 1            >>>Line length exceeded by 8 characters
+L7:9     i1:2 0 0 {{         >>>Start indentation disagreement: input=1; output=2
+L13:19   i0:0 0 1            >>>End indentation disagreement from input line 7
+L14:21   i0:2 0 1 {{         >>>Start indentation disagreement: input=0; output=2
+L14:21   i0:2 0 1 {{         >>>Entering HERE document CODE
+L15:21   i1:2 1 1 {{         >>>Line length exceeded by 5 characters
+L15:21   i1:2 1 1 {{         >>>Exiting HERE document CODE
+L27:35   i0:0 0 1            >>>End indentation disagreement from input line 14
+L28:35   i0:1 0 0 (          >>>Start indentation disagreement: input=0; output=1
+L31:45   i0:0 0 1            >>>End indentation disagreement from input line 28
+L32:47   i1:2 0 1 {{         >>>Start indentation disagreement: input=1; output=2
+L39:57   i0:0 0 1            >>>End indentation disagreement from input line 32
+L40:59   i0:2 0 1 {{         >>>Start indentation disagreement: input=0; output=2
+L40:59   i0:2 0 1 {{         >>>Entering HERE document CODE
+L41:59   i1:2 1 1 {{         >>>Exiting HERE document CODE
+L49:69   i0:0 0 1            >>>End indentation disagreement from input line 40
+L51:71   i0:0 0 1            use File::Spec;
+L76:97   i0:2 0 1 {{         >>>Start indentation disagreement: input=0; output=2
+L76:97   i0:2 0 1 {{         >>>Entering HERE document CODE
+L77:97   i1:2 1 1 {{         >>>Line length exceeded by 7 characters
+L77:97   i1:2 1 1 {{         >>>Line length exceeded by 8 characters
+L77:97   i1:2 1 1 {{         >>>Line length exceeded by 2 characters
+L77:97   i1:2 1 1 {{         >>>Exiting HERE document CODE
+L105:126 i1:2 1 1 {{         ..: '';
+L108:130 i0:0 0 1            >>>End indentation disagreement from input line 76
+L108:130 i0:0 0 1            >>>No further tabbing disagreements will be noted
+L121:146 i1:2 1 1 {{         >>>Line length exceeded by 3 characters
+L122:149 i0:1 0 1 {{         >>>Last line
+
+First indentation disagreement seen at input line 7
+Ending with indentation disagreement which started at input line 119
+Note: Indentation disagreement detection is not accurate for outdenting and -lp.
+
+1 long lines were outdented:
+  First at output line 4
+  use -noll to prevent outdenting, -l=n to increase line length
+
+6 output lines exceeded 80 characters:
+ First at line 4 by 8 characters
+ Maximum at line 4 by 8 characters
+ Last at line 147 by 3 characters
