@@ -2,7 +2,7 @@ NAME
     Net::WHMCS - interface to the WHMCS billing and support system
 
 VERSION
-    version 0.06
+    version 0.07
 
 SYNOPSIS
             use Net::WHMCS;
@@ -71,7 +71,7 @@ AUTHOR
     Fayland Lam <fayland@gmail.com>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2013 by Fayland Lam.
+    This software is copyright (c) 2014 by Fayland Lam.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.

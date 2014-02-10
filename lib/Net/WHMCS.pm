@@ -1,6 +1,6 @@
 package Net::WHMCS;
 {
-    $Net::WHMCS::VERSION = '0.06';
+    $Net::WHMCS::VERSION = '0.07';
 }
 
 # ABSTRACT: interface to the WHMCS billing and support system
@@ -60,13 +60,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Net::WHMCS - interface to the WHMCS billing and support system
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
@@ -143,7 +145,7 @@ Fayland Lam <fayland@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Fayland Lam.
+This software is copyright (c) 2014 by Fayland Lam.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

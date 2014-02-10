@@ -1,6 +1,6 @@
 package Net::WHMCS::Client;
 {
-    $Net::WHMCS::Client::VERSION = '0.06';
+    $Net::WHMCS::Client::VERSION = '0.07';
 }
 
 # ABSTRACT: WHMCS API Clients
@@ -31,6 +31,12 @@ sub updateclient {
 sub deleteclient {
     my ( $self, $params ) = @_;
     $params->{action} = 'deleteclient';
+    return $self->build_request($params);
+}
+
+sub closeclient {
+    my ( $self, $params ) = @_;
+    $params->{action} = 'closeclient';
     return $self->build_request($params);
 }
 
@@ -97,13 +103,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Net::WHMCS::Client - WHMCS API Clients
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head2 getclientsdetails
 
@@ -144,6 +152,14 @@ L<http://docs.whmcs.com/API:Update_Client>
 	})
 
 L<http://docs.whmcs.com/API:Delete_Client>
+
+=head2 closeclient
+
+	$client->closeclient({
+		clientid => 1
+	})
+
+L<http://docs.whmcs.com/API:Close_Client>
 
 =head2 getclients
 
@@ -213,7 +229,7 @@ Fayland Lam <fayland@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Fayland Lam.
+This software is copyright (c) 2014 by Fayland Lam.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

@@ -4,7 +4,7 @@
       "Fayland Lam <fayland@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.005, CPAN::Meta::Converter version 2.132830",
+   "generated_by" : "Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.133380",
    "license" : [
       "perl_5"
    ],
@@ -50,7 +50,7 @@
          "web" : "https://github.com/fayland/perl-Net-WHMCS"
       }
    },
-   "version" : "0.06",
+   "version" : "0.07",
    "x_contributors" : [
       "Neil Bowers <neil@bowers.com>"
    ]
