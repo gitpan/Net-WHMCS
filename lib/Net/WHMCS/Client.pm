@@ -1,7 +1,5 @@
 package Net::WHMCS::Client;
-{
-    $Net::WHMCS::Client::VERSION = '0.07';
-}
+$Net::WHMCS::Client::VERSION = '0.08';
 
 # ABSTRACT: WHMCS API Clients
 
@@ -111,7 +109,7 @@ Net::WHMCS::Client - WHMCS API Clients
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head2 getclientsdetails
 

@@ -2,7 +2,7 @@ NAME
     Net::WHMCS - interface to the WHMCS billing and support system
 
 VERSION
-    version 0.07
+    version 0.08
 
 SYNOPSIS
             use Net::WHMCS;

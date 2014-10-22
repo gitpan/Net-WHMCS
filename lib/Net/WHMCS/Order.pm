@@ -1,7 +1,5 @@
 package Net::WHMCS::Order;
-{
-    $Net::WHMCS::Order::VERSION = '0.07';
-}
+$Net::WHMCS::Order::VERSION = '0.08';
 
 # ABSTRACT: WHMCS API Order
 
@@ -28,6 +26,13 @@ sub acceptorder {
     return $self->build_request($params);
 }
 
+sub deleteorder {
+    my ( $self, $params ) = @_;
+    $params->{action} = 'deleteorder';
+    croak "orderid is required." unless exists $params->{orderid};
+    return $self->build_request($params);
+}
+
 sub getproducts {
     my ( $self, $params ) = @_;
     $params->{action} = 'getproducts';
@@ -48,7 +53,7 @@ Net::WHMCS::Order - WHMCS API Order
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head2 addorder
 
@@ -70,7 +75,15 @@ L<http://docs.whmcs.com/API:Add_Order>
 
 L<http://docs.whmcs.com/API:Accept_Order>
 
-=head2 addorder
+=head2 deleteorder
+
+	$client->deleteorder({
+		orderid => 1
+	});
+
+L<http://docs.whmcs.com/API:Delete_Order>
+
+=head2 getproducts
 
 	$client->getproducts();
 
